@@ -7,6 +7,7 @@ int main()
     printf("Enter number1: ");
     scanf("%d",&number1);
     printf("Enter number2: ");
+    printf("baraa")
     scanf("%d",&number2);
     if( (number1%number2) == 0)
         printf("Number 1 is a multiple of Number2 \n");
