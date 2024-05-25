@@ -1,0 +1,96 @@
+QUESTION 1 :
+
+#include <stdio.h>
+int main()
+{
+    int number1,number2;
+    printf("Enter number1: ");
+    scanf("%d",&number1);
+    printf("Enter number2: ");
+    scanf("%d",&number2);
+    if( (number1%number2) == 0)
+        printf("Number 1 is a multiple of Number2 \n");
+    else
+        printf("Number 1 is not a multiple of Number2 \n");
+    return 0;
+}
+
+
+QUESTION 2:
+
+#include <stdio.h>
+int main()
+{
+    printf("c: Circle\ns: Square\nr: Rectangle\nt: Triangle\n");
+    char c;
+    printf("choose the shape: ");scanf("%c",&c);
+    float radius,side,width,length,side1,side2,side3;
+    switch(c)
+    {
+        case 'c':
+            printf("Enter the radius: ");
+            scanf("%f",&radius);
+            float circle = 2 * radius * 3.14;
+            printf("Circle = %f\n",circle);
+            break;
+        case 's':
+            printf("Enter the side: ");scanf("%f",&side);
+            float square = 4 * side;
+            printf("Square = %f\n",square);
+            break;
+        case 'r':
+            printf("Enter the width: ");scanf("%f",&width);
+            printf("Enter the length: ");scanf("%f",&length);
+            float rectangle = 2 * (width + length);
+            printf("Rectangle = %f\n",rectangle);
+            break;
+        case 't':
+            printf("Enter side 1: ");scanf("%f",&side1);
+            printf("Enter side 2: ");scanf("%f",&side2);
+            printf("Enter side 3: ");scanf("%f",&side3);
+            float triangle = side1 + side2 + side3;
+            printf("Triangle = %f\n",triangle);
+            break;
+        default:
+            printf("Something wrong!\n");
+    }
+    return 0;
+}
+
+QUESTION 4b (BOUNUS)
+
+#include <stdio.h>
+int main()
+{
+    float number1,number2;
+    printf("Enter number 1: ");scanf("%f",&number1);
+    printf("Enter number 2: ");scanf("%f",&number2);
+    char operation;
+    printf("Choose an operation: +,-,* or /: ");
+    scanf("\n%c",&operation);
+    switch(operation)
+    {
+        case '+':
+            printf("%.3f + %.3f = %.3f\n",number1,number2,number1+number2);
+            break;
+        case '-':
+            printf("%.3f - %.3f = %.3f\n",number1,number2,number1-number2);
+            break;
+        case '*':
+            printf("%.3f * %.3f = %.3f\n",number1,number2,number1*number2);
+            break;
+        case '/':
+            if(number2==0)
+            {
+                printf("Something Wrong!\n");
+                break;
+            }
+            else
+                printf("%.3f / %.3f = %.3f\n",number1,number2,number1/number2);  
+            break;
+        default:
+            printf("\nSomething wrong!");
+    }
+    return 0;
+}
+
